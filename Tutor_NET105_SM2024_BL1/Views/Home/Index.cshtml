@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@*Tạo 1 nút đăng nhập => Chỉ cần trỏ đến action Login trong controller Account*@
+<h3>@ViewData["account"]</h3>
+@if (ViewData["account"] == "Chưa đăng nhập")
+{
+    <a href="@Url.Action("Login", "Account")" class="btn btn-primary">Đăng nhập</a>
+}
+else
+{
+    <h3 class="alert-danger">@TempData["login"]</h3>
+    <a href="@Url.Action("Logout", "Account")" class="btn btn-primary">Đăng xuất</a>
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
