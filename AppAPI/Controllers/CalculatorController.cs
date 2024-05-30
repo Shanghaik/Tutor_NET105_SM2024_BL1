@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AppAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("calculator")]
     [ApiController]
     public class CalculatorController : ControllerBase
     {
@@ -24,7 +24,7 @@ namespace AppAPI.Controllers
                 bool check = int.TryParse(number, out output); // Dùng tryparse để check
                 if(!check) return BadRequest("Dữ liệu đầu vào không đúng, vui lòng kiểm tra lại");
             }
-            string results = "";
+            string results = "Danh sách số nguyên tố trong dãy vừa nhập là: ";
             foreach (string number in numbers)
             {
                 int checkNumber = Convert.ToInt32(number);

@@ -1,0 +1,16 @@
+﻿<form asp-action="CheckPrime" asp-controller="Calculator" method="post">
+    <label for="primeInput">Enter a list number, separated by space :</label>
+    <input type="text" id="prime" name="prime" />
+    <button type="submit">Check Prime</button>
+</form>
+<h4>@ViewData["prime"]</h4>
+<form asp-action="CalculateInterest" asp-controller="Calculator" method="post">
+    <label>Nhập số tháng bạn muốn vay:</label> <br />
+    <input type="number" id="month" name="month" /><br />
+    <label>Tỉ lệ lãi :</label>  <br />
+    <input type="number" id="percent" name="percent" /><br />
+    <label >Nhập số tiền muốn vay :</label> <br />
+    <input type="number" id="money" name="money" /><br />
+    <button type="submit">Tính lãi</button>
+</form>
+<h4>@ViewData["interest"]</h4>
